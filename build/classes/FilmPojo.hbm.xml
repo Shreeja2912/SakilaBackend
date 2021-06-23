@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.sakila.Model.FilmPojo" table="sakila">
+
+
+		<id name="film_id" 
+            type="integer"
+            column="film_id">
+			<generator class="native" />
+		</id>
+            
+        <property name="title" 
+            column="title" 
+            type="string" />  
+            
+        <property name="description" 
+            column="description"
+            type="string" />  
+            
+         <property name="director" 
+            column="director"
+            type="string" />  
+            
+        <property name="rating" 
+            column="rating"
+            type="string" />  
+            
+        <property name="special_features" 
+            column="special_features"
+            type="string" />  
+            
+            
+        <property name="language_id" 
+            column="language_id" 
+            type="integer" />                   
+		
+		<property name="release_year" 
+            column="release_year" 
+            type="date" /> 
+        
+        <property name="Is_Deleted" 
+            column="Is_Deleted" 
+            type="integer" /> 
+            	
+	</class>
+</hibernate-mapping>

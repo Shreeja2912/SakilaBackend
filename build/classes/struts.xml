@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+   "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+<package name="default" extends="json-default">
+<action name="getData" method="addDataMethod" class="com.sakila.Action.LoadDataAction" >
+	<!-- <result type="json" name="success">/success.jsp</result> -->
+	<result type="json"><param name="root">movieToJson</param></result>
+	<result type="json" name="failure">/error.jsp</result>
+</action>
+<action name="addEditData" method="editDataMethod" class="com.sakila.Action.LoadDataAction" >
+	<result type="json" name="success">movieToJson</result>
+	<result type="json" name="failure">/error.jsp</result>
+</action>
+<action name="deleteData" method="deleteDataMethod" class="com.sakila.Action.LoadDataAction" >
+	<result type="json" name="success">movieToJson</result>
+	<result type="json" name="failure">/error.jsp</result>
+</action>
+<action name="searchData" method="searchDataMethod" class="com.sakila.Action.LoadDataAction" >
+	<result type="json"><param name="root">movieToJson.search</param></result>
+	<result type="json" name="failure">/error.jsp</result> 
+</action>
+	</package>
+</struts>
